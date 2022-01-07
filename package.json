@@ -9,7 +9,7 @@
     "version:patch": "npm version patch",
     "version:minor": "npm version minor",
     "version:major": "npm version major",
-    "postversion": "cross-var git tag v$npm_package_version && git push --delete origin v$npm_package_version && git push --tags"
+    "postversion": "cross-var git tag v$npm_package_version | git push --delete origin v$npm_package_version | git push --tags"
   },
   "author": "",
   "license": "ISC",
