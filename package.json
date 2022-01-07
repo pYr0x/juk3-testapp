@@ -6,10 +6,10 @@
   "scripts": {
     "build": "copyfiles --flat src/*.js dist",
     "test": "echo \"tests passed\" && exit 0",
-    "version:patch": "npm version patch",
+    "version:patch": "npm version patch && cross-var git tag v$npm_package_version",
     "version:minor": "npm version minor",
     "version:major": "npm version major",
-    "postversion": "cross-var git tag v$npm_package_version && git pull --tags -f && git push --tags"
+    "postversion": "git push --tags"
   },
   "author": "",
   "license": "ISC",
