@@ -46,8 +46,9 @@ jobs:
     name: coverage
     runs-on: ubuntu-latest
     steps:
-      - uses: paambaati/codeclimate-action@v2.7.1
+      - uses: paambaati/codeclimate-action@v3.0.0
         env:
           CC_TEST_REPORTER_ID: 8b43f0ce3ac2b1765a89064593546e7c0a971169e75d8f64a94f405e7e317e17
         with:
-          coverageLocations: "/coverage/clover.xml:clover"
+          coverageCommand: yarn run test
+          coverageLocations: ${{github.workspace}}/coverage/clover.xml:clover
