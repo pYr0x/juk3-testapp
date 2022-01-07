@@ -1,0 +1,14 @@
+{
+  "name": "juk3-testapp",
+  "version": "1.0.0",
+  "description": "github action test and release app",
+  "main": "index.js",
+  "scripts": {
+    "build": "copyfiles --flat src/*.js dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "copyfiles": "^2.4.1"
+  }
+}
