@@ -4,7 +4,8 @@
   "description": "github action test and release app",
   "main": "index.js",
   "scripts": {
-    "build": "copyfiles --flat src/*.js dist"
+    "build": "copyfiles --flat src/*.js dist",
+    "test": "echo \"tests passed\" && exit 1"
   },
   "author": "",
   "license": "ISC",
