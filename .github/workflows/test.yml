@@ -48,6 +48,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Install
+        run: yarn i
+
       - name: Build
         run: yarn run build
 
