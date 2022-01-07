@@ -1,6 +1,6 @@
 {
   "name": "juk3-testapp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "github action test and release app",
   "main": "index.js",
   "scripts": {
