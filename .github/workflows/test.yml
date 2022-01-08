@@ -41,6 +41,12 @@ jobs:
 
       - name: Test
         run: pnpm run test
+
+      - name: Upload
+        uses: actions/upload-artifact@v2
+        with:
+          name: my-artifact
+          path: dist
   coverage:
     needs: [ test ]
     name: coverage
@@ -48,11 +54,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Install
-        run: yarn install
-
-      - name: Build
-        run: yarn run build
+      - uses: actions/download-artifact@v2
+        with:
+          name: my-artifact
 
       - name: Code Test and Coverage
         uses: paambaati/codeclimate-action@v3.0.0
