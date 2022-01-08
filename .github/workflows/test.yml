@@ -47,6 +47,7 @@ jobs:
         with:
           name: my-artifact
           path: dist
+
   coverage:
     needs: [ test ]
     name: coverage
@@ -57,6 +58,7 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: my-artifact
+          path: dist
 
       - name: Code Test and Coverage
         uses: paambaati/codeclimate-action@v3.0.0
