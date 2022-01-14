@@ -8,3 +8,4 @@ node_modules
 examples/
 __test__/
 src/
+coverage/
